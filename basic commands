@@ -1,18 +1,28 @@
-docker ps                   : To list running containers
-docker ps -a                : To list all containers
-docker run <image-name>     : To run docker container from Image-name
+------------
+CONTAINER :
+------------
+
+docker ps                            : To list running containers
+docker ps -a                         : To list all containers
+docker run <image-name>              : To run docker container from Image-name
+docker run -it <image-name> bash     : To run docker container from Image-name and enter into container console
+docker run <image-name> command      : executing command when we run container (example for command : sleep 5 )
+dokcer exec <container-name> command : executing command on running container (example for command : cat /etc/hosts)
+
 
 NOTE: docker looks for image locally if it's not found it will get from docker hub.
 
 docker run -d <image-name>                       : To run docker conatiner in detached mode (which runs in background)
 docker attach <container-id or container-name>   : To attach to conatiner which is in detached mode (which runs in background)
-docker stop <container-id or container-name>     : To stop running container
+docker stop <container-id or container-name>     : To stop or kill running container
 docker rm <container-name>                       : To remove container permanently
 
 NOTE : It should print container name back so that we are good.
 NOTE : We can use first 4 digits of container-id in place of conatiner-id. 
 
+----------
 IMAGES :
+----------
 
 docker images            : To list images
 docker rmi <image-name>  : To remove image
@@ -23,7 +33,6 @@ docker pull <image-name> : To pull docker image into local
 
 NOTE : Unlike VM'S containers are not meant to host operating system, Containers are meant to run specific task or process. 
 
-docker run <image-name> command      : executing command when we run container (example for command : sleep 5 )
-dokcer exec <container-name> command : executing command on running container (example for command : cat /etc/hosts)
+
 
 
