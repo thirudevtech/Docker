@@ -1,0 +1,34 @@
+docker run -i <image-name>   : Running docker container in interactive mode (i :- interactive mode)
+docker run -it <image-name>  : Running docker container in interactive mode and attached to container terminal (t :- sudo terminal)
+
+
+--------------------------------
+PORT MAPPING or PORT PUBLISHING :
+--------------------------------
+
+NOTE :
+Application running in docker container can be accessed using docker ip-address only if we are on docker host.
+People from outside can access Application running in docker container using docker host ip-address, but we need to map docker host port 
+number to docker container port number where application running. 
+same docker host port number cannot map to more than one port number on docker container.
+
+
+docker run -p 8000:5000 <image-name> : Running docker conatiner by mapping docker host port number to docker containerport number where 
+application running.  ( 8000 :- docker host port number , 5000 :- docker container port number where application running )
+
+-----------------
+VOLUME MOUNTING :
+-----------------
+
+docker run -v /opt/data:/var/lib/mysql <image-name> : Running docker conatiner by mapping docker host folder to a folder with docker 
+conatiner.  ( /opt/data :- folder in docker host, /var/lib/mysql:- folder in docker container )
+
+docker inspect <container-name or ID>  : Getting docker container details in Jason format. 
+
+docker logs <container-name or ID>     : Getting docker container log details.
+
+
+
+
+
+
