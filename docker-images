@@ -1,0 +1,27 @@
+---------
+IMAGES :-
+---------
+ 
+docker build <docker-file-name> -t <tag-name>   : To build docker image from docker file. 
+docker push <image-tag-name>                    : To push docker image to docker hub.
+docker history <image-name>                     : To get details of each layer of image.
+docker login                                    : To login to docker account
+
+
+NOTE : 
+docker file consists of Instructions and Arguments. 
+ex:- FROM UBUNTU ( FROM :- Instructions, UBUNTU :- Argument )
+
+Every docker image must be based half of OS or other image which is created before based on OS. 
+We cannot push docker images directly to docker hub default repository ( i.e, Library). Only certified and supported images can push into 
+docker hub . 
+To push docker images to our account, we should first login to our account. 
+
+-----------------------
+Environment Variables :-
+-----------------------
+docker run -e <environment-variable>=<value> <image-name> : To set environment variable with in container while creating it.
+
+
+
+
