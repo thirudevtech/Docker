@@ -20,13 +20,17 @@ application running.  ( 8000 :- docker host port number , 5000 :- docker contain
 VOLUME MOUNTING :
 -----------------
 
-docker run -v /opt/data:/var/lib/mysql <image-name> : Running docker conatiner by mapping docker host folder to a folder with docker 
-conatiner.  ( /opt/data :- folder in docker host, /var/lib/mysql:- folder in docker container )
+docker run -v /opt/data:/var/lib/mysql -u <username> <image-name> : Running docker conatiner by mapping docker host folder to a folder with docker 
+conatiner.  ( /opt/data :- folder in docker host, /var/lib/mysql:- folder in docker container, -u :- username sometimes we will face
+user permissions so we need to use username )
 
-docker inspect <container-name or ID>  : Getting docker container details in Jason format. 
+docker inspect <container-name or ID>      : Getting docker container details in Jason format. 
 
-docker logs <container-name or ID>     : Getting docker container log details.
+docker logs <container-name or ID>         : Getting docker container log details.
 
+docker run ubuntu:17.10 cat /etc/*release* : Running docker container with specific ubuntu version and executing command to get 
+                                             os details.
+                                             
 
 
 
