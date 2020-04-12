@@ -1,0 +1,17 @@
+docker run --link redis:redis <image-name> : Running docker container with <image-name> and linking to redis container. ( redis:redis :-
+                                             name of redis container:name of host that new continer is looking for)
+
+note :- In above case, running continer will create redis host entry with it internal ip-address in to /etc/hosts folder. 
+
+---------------------
+docker-compose.yml :-
+---------------------
+
+This files consists of dictionaries ---> key, values then properties and it's values.
+ex:- 
+dictionary:
+  key: value
+  property:
+    - value 
+    
+docker-compose up : To bring up entire application stalk metioned in docker-compose file.  
