@@ -1,0 +1,41 @@
+1. with docker installation we get default file system as below :
+   var/lib/docker
+   -- aufs
+      containers
+      image
+      volumes
+
+docker volume create test-folder : It will create test-folder under volumes folder. 
+
+VOLUME-MOUNTING :
+
+2. docker will automatically create folder under volumes folder if it is not existed by the time we are mounting volume to some other container. 
+
+BIND-MOUNTING :
+
+3. If we want to mount some other data staorage folder on docker host other than default folder( volumes ) to docker container,
+   we need to use below command :
+   dcoker run -v <provide entire folder path on docker-host>:<path on container> <image-name> 
+
+LATEST COMMAND :
+
+docker run --mount type=bind, source=<folder on docker host>, target=<folder on container>
+
+COMMON STORAGE DRIVERS :
+
+AUFS
+ZFS
+BTRFS
+Device mapper
+Overlay
+Overlay2
+
+Above storage driver selection depends on OS we use. 
+
+docker info  : This command will show details of docker installed on docker host. 
+
+docker system df : It will show actual disk usage of docker
+
+docker system de -v : Will give individual disk usage.
+
+

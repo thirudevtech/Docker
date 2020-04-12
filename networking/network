@@ -1,0 +1,18 @@
+1. When docker installed by default docker installs 3 networks by default :
+   a. bridge
+   b. none
+   c. host
+
+2. Bridge is default network where a container gets attached to. 
+
+docker run ubuntu --network=<network-name>  ex:- none, host
+
+docker network create --driver bridge --subnet 182.3.4.5/16 custom isolated network : It will create custom network on docker. 
+
+docker network ls : It will show all networks on docker 
+
+Within docker containers reach each other using containers name. 
+
+docker built in DNS server always runs at 127.0.0.11
+
+

@@ -1,0 +1,19 @@
+1. docker engine is nothing but docker host where we are installing docker. 
+2. docker installation includes componenets like :
+   a. docker deamon.
+   b. rest api
+   c. docker cli
+
+3. docker deamon is background process that manages docker objects such as Imaages, Containers, Volumes and Networks. 
+4. rest api is server api interface that programes can be used to talk to deamon and provide instructions. 
+5. docker cli is command line interface to perform actions on images, continers, dockerfile. It uses rest api to interact with docker deamon. 
+6. docker cli need not to be on same docker host, we can connect to remote docker api using below command :
+   docker -H=remote-docker-engine(dcoker host ip-address):port-number(2375)
+7. docker uses namespaces to isolate workspace ( process-id, network, interprocess, mount and Unix-timesharing ) are created in their own namespace
+   there by providing isolation between containers.
+8. docker uses cgroups to restrict the amount of hardware resources allocates to each continer. 
+
+   docker run --cpus=.5 ubuntu  : It runs ubuntu continer utilizing 50% of docker host cpus. 
+   dokcer run --memory=100m ubuntu
+
+
