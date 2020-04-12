@@ -1,5 +1,9 @@
-docker run -i <image-name>   : Running docker container in interactive mode (i :- interactive mode)
-docker run -it <image-name>  : Running docker container in interactive mode and attached to container terminal (t :- sudo terminal)
+docker run -i <image-name>                         : Running docker container in interactive mode (i :- interactive mode)
+docker run -it <image-name>                        : Running docker container in interactive mode and attached to container terminal 
+                                                     (t :- sudo terminal)
+dokcer run -d --name=<container-name> <image-name> : Running docker container in detached mode and naming container. 
+docker run ubuntu:17.10 cat /etc/*release*         : Running docker container with specific ubuntu version and executing command to get 
+                                                     os details.
 
 
 --------------------------------
@@ -28,8 +32,7 @@ docker inspect <container-name or ID>      : Getting docker container details in
 
 docker logs <container-name or ID>         : Getting docker container log details.
 
-docker run ubuntu:17.10 cat /etc/*release* : Running docker container with specific ubuntu version and executing command to get 
-                                             os details.
+
                                              
 
 
