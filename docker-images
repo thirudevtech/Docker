@@ -2,10 +2,10 @@
 IMAGES :-
 ---------
  
-docker build <docker-file-name> -t <tag-name>   : To build docker image from docker file. 
-docker push <image-tag-name>                    : To push docker image to docker hub.
-docker history <image-name>                     : To get details of each layer of image.
-docker login                                    : To login to docker account
+docker build . -f <docker-file-name> -t <tag-name>   : To build docker image from docker file which is availabe in current folder. 
+docker push <image-tag-name>                         : To push docker image to docker hub.
+docker history <image-name>                          : To get details of each layer of image.
+docker login                                         : To login to docker account
 
 
 NOTE : 
