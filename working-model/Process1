@@ -1,0 +1,12 @@
+# procedure followed to pulblish docker images to Nexus Repo :-
+
+1. Pull basic docker images( Alpine ) from Docker Hub
+2. Add certificates to base docker image
+3. Push to Nexus Repository after scannong through Aqua for docker image vulnerabilities.
+	
+4. Building Actual images from base Images pulled from Docker Hub. 
+	a. Copying application code 
+	b. Installing Application dependencies
+	c. creating containser out of it
+
+
